@@ -1,0 +1,246 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+    body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DejaVu Sans', sans-serif;
+  
+}
+
+.border {
+    background-color: white;
+    width: 18cm;
+    height: 26cm;
+    margin-left: 0.5cm;
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    border-color: teal;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.parent-border {
+    background-color: white;
+    width: 19cm;
+    margin-left: 0cm;
+   
+    height: 27cm;
+    border-color: teal;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.table-row-border>th {
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: teal;
+    border-top-color: teal;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0;
+    padding: 0;
+    width: 2cm;
+    height: 1cm;
+    text-align: center;
+    color: teal;
+}
+
+td {
+    height: 1cm;
+    text-align: center;
+}
+
+.table-addresses>th {
+    color: teal;
+    text-align: center;
+    width: 4cm;
+    text-align: left;
+}
+
+table.invoice-table-address {
+    margin-left: 1cm;
+}
+
+table.invoice-table-address td {
+    font-size: 15px;
+    text-align: left;
+    height: 0.5cm;
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+.invoice-table {
+    
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+   /* border: rgb(240, 14, 14) 1px solid; */
+}
+
+.parent-invoice-logo-type {
+    height: 2cm;
+   /* border: rgb(14, 243, 7) 1px solid; */
+}
+
+.parent-invoice-table-address {
+    margin-top: 0.5cm;
+    height: 6cm;
+  /*   border: rgb(24, 9, 229) 1px solid; */
+}
+
+.parent-invoice-table {
+    margin-top: 0.5cm;
+ /*    border: rgb(230, 251, 8) 1px solid; */
+}
+
+.parent-invoice-total {
+    margin-top: 0.5cm;
+   /*  border: rgb(234, 7, 30) 1px solid;*/ 
+    height: 1cm;
+}
+
+.parent-invoice-terms {
+    margin-top: 1cm;
+    /* border: rgb(16, 219, 39) 1px solid; */
+    height: 6cm;
+}
+
+.invoice-type {
+    font-size: 28px;
+    font-weight: 700;
+    color: teal;
+    left: 0.5cm;
+    bottom: 0cm;
+    
+}
+
+.invoice-logo {
+    right: 1cm;
+    bottom: 0cm;
+}
+
+.invoice-total-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: teal;
+    left: 1cm;
+    bottom: 0cm;
+}
+
+.invoice-total {
+    right: 1cm;
+    bottom: 0cm;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.invoice-terms {
+    left: 1cm;
+    bottom: 0cm;
+}
+</style>
+</head>
+
+<body>
+    
+    <div class="parent-border">
+        <div class="border">
+            <div class="parent parent-invoice-logo-type">
+                <span class="invoice-type child">
+                    ИЗВЕЩЕНИЕ ЖКХ №<?php echo $nom; ?> от <?php echo $data1; ?>            
+            </span> <!--
+            <?php echo $a; ?><img class="invoice-logo child" src="logo.jpg" alt="" width="100" height="100">
+            -->
+            
+        </div>
+            
+            <div class="parent parent-invoice-table-address">
+                <table class="child invoice-table-address" style="border-spacing: 0;">
+                    <tr class="table-addresses">
+                        <th>ОРГАНИЗАЦИЯ </th>
+                        <th>МЕСТО ОБСЛУЖИВАНИЯ</th>
+                        <th>ПОТРЕБИТЕЛЬ</th>
+                        <th>ИЗВЕЩЕНИЕ</th>
+                    </tr>
+                    <tr class="temp">
+                        <td>Наименование: "<?php echo $details1; ?>"</td>
+                        <td>Адрес: </td>
+                        <td><?php echo $client1; ?></td>
+                        <td>Номер извещения:<?php echo $nom; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Адрес: <?php echo $details3; ?></td>
+                        <td><?php echo $address1; ?></td>
+                        <td>Лицевой счет: <?php echo $client2; ?></td>
+                        <td>Дата и время: <?php echo $data; ?></td>
+                    </tr>
+                    <tr>
+                        <td>УНП: <?php echo $details2; ?> </td>
+                        
+                    </tr>                   
+                </table>
+            </div>
+
+            <div class="parent parent-invoice-table">
+                <table class="invoice-table" style="border-spacing: 0;">
+                    <tr class="table-row-border">
+                        <th>Код<br>показания</th>
+                        <th>Услуга</th>
+                        <th>Единица<br>хранения</th>
+                        <th>Тариф</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                    </tr>                 
+
+                    <tbody>
+                        <?php foreach ($list as $row): ?>
+                        <tr>
+                            <td><?php echo $row['Код_таб_часть_извещение']; ?></td>
+                            <td><?php echo $row['Наим_услуги']; ?></td>
+                            <td><?php echo $row['Наименование_ед_хран']; ?></td>
+                            <td><?php echo $row['Тариф']; ?></td>
+                            <td><?php echo $row['Количество']; ?></td>
+                            <td><?php echo $row['Итого_сумма']; ?> BYN</td>
+                        </tr>
+                        <?php endforeach; ?>    
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="parent  parent-invoice-total">
+                <span class="invoice-total-text child">
+                    Итого к оплате :
+                </span>
+
+                <span class="invoice-total child">
+                    BYN: <?php echo $details4; ?>                                
+                </span>
+            </div>
+
+            <div class="parent  parent-invoice-terms">
+                <div class="child  invoice-terms">
+                    <h4>ИЗВЕЩЕНИЕ СФОРМИРОВАННО АВТОМАТИЧЕСКИ</h4>
+                    <p>Подпись: ...........................................</p>
+                    <p>Сотрудник: <?php echo $worker; ?></p>
+                    <p>Должность: <?php echo $post; ?></p>
+                    <p>Дата и время: <?php echo $data; ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

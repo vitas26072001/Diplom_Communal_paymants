@@ -1,0 +1,8 @@
+{
+    "roboto condensed": {
+        "italic": "C:\\wamp64\\www\\6\\notification\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_condensed_italic_f390e32554faf0f16ab6f3c1d9f9c9ab",
+        "300": "C:\\wamp64\\www\\6\\notification\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_condensed_300_e7008b98ab3054aae221d9265a319767",
+        "normal": "C:\\wamp64\\www\\6\\notification\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_condensed_normal_0f4b84b34f148b1ab47e419b61ac29ae",
+        "bold": "roboto_condensed_bold_518a77b8d3453f5b6004b272b16fab67"
+    }
+}
