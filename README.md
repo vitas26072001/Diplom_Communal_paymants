@@ -24,7 +24,7 @@
 {path} — путь к месту нахождения картинки.
 
 <!-- Плакат 1 -->
-![Image alt](https://github.com/vitas26072001/Diplom_Communal_paymants/raw/main/Photo/+ДП. Плакат. Постановка задачи.png)
+![Image alt](https://github.com/vitas26072001/Diplom_Communal_paymants/raw/main/Photo/image1.png)
 
 Структура системы, web-приложения состроит из трех звеньев:
 Клиентская часть
