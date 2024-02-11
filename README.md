@@ -13,7 +13,18 @@
 4)Регистрация показаний индивидуальных приборов учета.
 5)Формирование извещений для оплаты.
 
+<!--
+![Иллюстрация к проекту](https://github.com/jon/coolproject/raw/master/image/image.png)
+
+![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png) -->
+
+{username} — ваш ник на ГитХабе;
+{repository} — репозиторий где хранятся картинки;
+{branch} — ветка репозитория;
+{path} — путь к месту нахождения картинки.
+
 <!-- Плакат 1 -->
+![Image alt](https://github.com/vitas26072001/Diplom_Communal_paymants/raw/main/Photo/+ДП. Плакат. Постановка задачи.png)
 
 Структура системы, web-приложения состроит из трех звеньев:
 Клиентская часть
